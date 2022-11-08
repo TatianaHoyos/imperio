@@ -6,10 +6,29 @@
 
         <link rel="stylesheet" href="style.css">
     </head>
+
     <body background="img/fondo.jpg">
-        
+        <header id="menu">
+            <div class="caja">
+                <input  onclick="ocultar()"  id="btn-cerrar" type="image" src="img/cerrar.png" height="50" width="50"/>
+                <h1>
+                    <img id="logo" src="img/logo1.png" > </h1>
+                    <nav>
+                        <ul id="menú">
+                            <li ><a href="index.html">Inicio</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="registro.html">Ver Registro</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="reportes.html">Consultar Reporte</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="#">Salir</a></li>
+                        </ul>
+                    </nav>
+            </div>
+        </header>
            
-        <main>
+        <main  id="contenido" style="background-color:rgba(27, 18, 18, 0)">
+            <input onclick="mostrar()" id="btn-abrir" type="image" src="img/me.svg" height="50" width="50"/>
             <form>
                 <label for="fecha_inicial">Fecha Inicial</label>
                 <input type="date" id="fecha_inicial" class="input-padron" required placeholder="(XX)XXXX XXXX">
@@ -62,8 +81,22 @@
                
             </table>
             <input type="submit" value="Ver" class="enviar">
-    
+        </main>
+
             
               
     </body>
+    <script>
+        function mostrar() {
+            document.getElementById("menu").style.width = "300px";
+            document.getElementById("contenido").style.marginLeft = "300px";
+            document.getElementById("btn-abrir").style.visibility = "hidden";
+        }
+        
+        function ocultar() {
+            document.getElementById("menu").style.width = "0";
+            document.getElementById("contenido").style.marginLeft = "0";
+            document.getElementById("btn-abrir").style.visibility = "visible";
+        }
+        </script>
 </html>
