@@ -24,6 +24,9 @@ nav{
     top: 110px;
     right: 0;
 }
+h2{
+    color: #f5eb9a;
+}
 nav a{
     text-transform: uppercase;
     color: #f5eb9a;
