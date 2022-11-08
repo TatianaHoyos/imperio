@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registro</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body background="img/fondo.jpg">
+        
+        <header id="menu">
+            <div class="caja">
+                <input  onclick="ocultar()"  id="btn-cerrar" type="image" src="img/cerrar.png" height="50" width="50"/>
+                <h1>
+                    <img id="logo" src="img/logo1.png" > </h1>
+                    <nav>
+                        <ul id="menú">
+                            <li ><a href="index.html">Inicio</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="registro.html">Ver Registro</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="reportes.html">Consultar Reporte</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="#">Salir</a></li>
+                        </ul>
+                    </nav>
+            </div>
+        </header>
+           
+        <main  id="contenido" style="background-color:rgba(27, 18, 18, 0)">
+            <input onclick="mostrar()" id="btn-abrir" type="image" src="img/me.svg" height="50" width="50"/>
+            <form>
+                <label for="cedula">Cedula</label>
+                <input type="text" id="cedula" class="input-padron" required placeholder="(XX)XXXX XXXX">
+
+                <label for="nombreapellido">Nombre y Apellido</label>
+                <input type="text" id="nombreapellido" class="input-padron" required placeholder="Juanito Perez">
+                
+                <label for="correoelectronico">Correo Electrónico</label>
+                <input type="text" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+
+                <label for="Telefono">Teléfono</label>
+                <input type="text" id="Telefono" class="input-padron" required placeholder="(XX)XXXX XXXX">
+
+                <input type="submit" value="Enviar formulario" class="enviar"> 
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Nombre </th>
+                        <th>Dirección</th>
+                        <th>Correo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" value="Consultar" class="enviar">
+            <input type="submit" value="Editar" class="enviar">
+            <input type="submit" value="Registrar" class="enviar">
+            <input type="submit" value="Eliminar" class="enviar">
+        </main>
+    </body>
+    <script>
+        function mostrar() {
+            document.getElementById("menu").style.width = "300px";
+            document.getElementById("contenido").style.marginLeft = "300px";
+            document.getElementById("btn-abrir").style.visibility = "hidden";
+        }
+        
+        function ocultar() {
+            document.getElementById("menu").style.width = "0";
+            document.getElementById("contenido").style.marginLeft = "0";
+            document.getElementById("btn-abrir").style.visibility = "visible";
+        }
+        </script>
+
+</html>
