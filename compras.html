@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Compras</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body background="img/fondo.jpg">
+        
+        <header id="menu">
+            <div class="caja">
+                <input  onclick="ocultar()"  id="btn-cerrar" type="image" src="img/cerrar.png" height="50" width="50"/>
+                <h1>
+                    <a href="index.html"><img id="logo" src="img/logo1.png"></a></h1>
+                    <nav>
+                        <ul id="menú">
+                            <li ><a href="proveedor.html">Proveedor</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="compras.html">Compras</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="registro.html">Existencias</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="reportes.html">Ventas</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="#">Meseros</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="sesion.html">Cerrar sesión</a></li>
+                        </ul>
+                    </nav>
+            </div>
+        </header>
+           
+        <main  id="contenido" style="background-color:rgba(27, 18, 18, 0)">
+            <input onclick="mostrar()" id="btn-abrir" type="image" src="img/me.svg" height="50" width="50"/>
+            <form>
+                <h2>Ingresar compra de producto</h2>
+                <label for="producto">Nombre producto</label>
+                <input type="text" id="producto" class="input-padron" required>
+
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" class="input-padron" required>
+                
+                <label for="precio">Precio</label>
+                <input type="number" id="precio" class="input-padron" required >
+
+                <label for="factura">Número factura</label>
+                <input type="number" id="factura" class="input-padron" required >
+
+                <input type="submit" value="Guardar" class="enviar"> 
+            </form>
+
+            <form>
+                <h2>Consultar productos</h2>
+                <label for="producto">Nombre producto</label>
+                <input type="text" id="producto" class="input-padron" required>
+                <label for="fecha_inicial">Fecha Inicial</label>
+                <input type="date" id="fecha_inicial" class="input-padron" required >
+                <label for="fecha_final">Fecha Final</label>
+                <input type="date" id="fecha_final" class="input-padron" required >
+                <input type="submit" value="Consultar" class="enviar">
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Número factura</th>
+                        <th>Eliminar</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Club Colombia Dorada</td>
+                        <td>20</td>
+                        <td>$1,500</td>
+                        <td>123456</td>
+                        <td><input  onclick="ocultar()"  id="btn-eliminar" type="image" src="img/eliminar.png" height="25" width="25"/></td>
+                        <td><input  onclick="ocultar()"  id="btn-editar" type="image" src="img/editar.png" height="25" width="25"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
+    <script>
+        function mostrar() {
+            document.getElementById("menu").style.width = "300px";
+            document.getElementById("contenido").style.marginLeft = "300px";
+            document.getElementById("btn-abrir").style.visibility = "hidden";
+        }
+        
+        function ocultar() {
+            document.getElementById("menu").style.width = "0";
+            document.getElementById("contenido").style.marginLeft = "0";
+            document.getElementById("btn-abrir").style.visibility = "visible";
+        }
+        </script>
+
+</html>
