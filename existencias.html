@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Existencias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body  background="img/fondo.jpg">
+    <header id="menu">
+        <div class="caja">
+            <input  onclick="ocultar()"  id="btn-cerrar" type="image" src="img/cerrar.png" height="50" width="50"/>
+            <h1>
+                <a href="index.html"><img id="logo" src="img/logo1.png"></a></h1>
+                <nav>
+                    <ul id="menú">
+                        <li ><a href="proveedor.html">Proveedor</a></li>
+                        <li class="separar"></li>
+                        <li ><a href="compras.html">Compras</a></li>
+                        <li class="separar"></li>
+                        <li ><a href="existencias.html">Existencias</a></li>
+                        <li class="separar"></li>
+                        <li ><a href="ventas.html">Ventas</a></li>
+                        <li class="separar"></li>
+                        <li ><a href="mesero.html">Meseros</a></li>
+                        <li class="separar"></li>
+                        <li ><a href="sesion.html">Cerrar sesión</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    <main id="contenido" style="background-color:rgba(27, 18, 18, 0)">
+        <input onclick="mostrar()" id="btn-abrir" type="image" src="img/me.svg" height="50" width="50"/>
+        <form>
+            <h2>Reportes de Existencias</h2>
+            <label for="producto">Nombre producto</label>
+            <input type="text" id="producto" class="input-padron" required>
+            <label for="fecha_inicial">Fecha Inicial</label>
+            <input type="date" id="fecha_inicial" class="input-padron" required >
+            <label for="fecha_final">Fecha Final</label>
+            <input type="date" id="fecha_final" class="input-padron" required >
+            <input type="submit" value="Consultar" class="enviar">
+        </form>
+   
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre productos</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Número factura</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Club Colombia Dorada</td>
+                    <td>20</td>
+                    <td>$1,500</td>
+                    <td>123456</td>
+                  
+                </tr>
+
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                    </tr>
+                   
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                    </tr>
+                        
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                    </tr>
+                </tbody>
+               
+            </tbody>
+        </table>
+    
+       
+    </main>
+    
+</body>
+<script>
+    function mostrar() {
+        document.getElementById("menu").style.width = "300px";
+        document.getElementById("contenido").style.marginLeft = "300px";
+        document.getElementById("btn-abrir").style.visibility = "hidden";
+    }
+    
+    function ocultar() {
+        document.getElementById("menu").style.width = "0";
+        document.getElementById("contenido").style.marginLeft = "0";
+        document.getElementById("btn-abrir").style.visibility = "visible";
+    }
+    </script>
+</html>

@@ -8,8 +8,8 @@ header{
     height: 100%;
     display: table-cell;
     bottom:0;
-    
 }
+
 .caja{
     width: 100%;
     margin: 0 auto;
@@ -51,6 +51,7 @@ nav a{
         
         
     }
+
     li.separar{
         margin: 30px;
     }
@@ -142,6 +143,32 @@ nav a{
     padding: 1rem 0;
     box-sizing:border-box;
     }
+    #menu_horizontal {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color:rgb(3 3 3 / 30%);
+      }
+      
+      #menu_horizontal li {
+        float: right;
+      }
+      
+      #menu_horizontal li a {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: underline;
+        color: #f5eb9a;
+      }
+    #nav_menu_horizontal {
+        display: flex;
+        justify-content: space-between;
+    }
+    #btn-abrir, #menu_horizontal {
+        display: inline-block;
+      }
     #contenido {
         transition: margin-left .4s;
         padding: 1rem;

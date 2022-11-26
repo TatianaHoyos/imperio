@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body background="img/fondo.jpg">
+    <header id="menu">
+        <div class="caja">
+            <input  onclick="ocultar()"  id="btn-cerrar" type="image" src="img/cerrar.png" height="50" width="50"/>
+           
+            <h1><a href="index.html"><img id="logo" src="img/logo1.png"></a></h1>
+                <nav>
+                    <ul id="menú">
+                        <li ><a href="proveedor.html">Proveedor</a></li>
+                        <li class="separar"></li>
+                        <li ><a href="compras.html">Compras</a></li>
+                        <li class="separar"></li>
+                        <li ><a href="existencias.html">Existencias</a></li>
+                        <li class="separar"></li>
+                        <li ><a href="ventas.html">Ventas</a></li>
+                        <li class="separar"></li>
+                        <li ><a href="mesero.html">Meseros</a></li>
+                        <li class="separar"></li>
+                        <li ><a href="sesion.html">Cerrar sesión</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    <main id="contenido" style="background-color:rgba(27, 18, 18, 0)">
+        
+        <nav id="nav_menu_horizontal">
+            <input onclick="mostrar()" id="btn-abrir" type="image" src="img/me.svg" height="50" width="50"/>
+            <ul id="menu_horizontal">
+                <li ><a href="mesero.html">Meseros</a></li>
+                <li ><a href="registro.html">Registrar Mesero</a></li>
+                
+               
+            </ul>
+        </nav>
+       
+        <form>
+            
+            <label for="producto">Nombre Mesero</label>
+            <input type="text" id="producto" class="input-padron">
+            <label for="cedula">Cedula</label>
+            <input type="number" id="cedula" class="input-padron" required >
+            <input type="submit" value="Consultar" class="enviar">
+          
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cedula</th>
+                    <th>Nombres y Apellidos </th>
+                    <th>Telefono</th>
+                    <th>Dirección</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12372903</td>
+                    <td>Pepito Perez</td>
+                    <td>31388</td>
+                    <td>av 46</td>
+                    <td>pepito@pepitoperez.com</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+<script>
+    function mostrar() {
+        document.getElementById("menu").style.width = "300px";
+        document.getElementById("contenido").style.marginLeft = "300px";
+        document.getElementById("btn-abrir").style.visibility = "hidden";
+    }
+    
+    function ocultar() {
+        document.getElementById("menu").style.width = "0";
+        document.getElementById("contenido").style.marginLeft = "0";
+        document.getElementById("btn-abrir").style.visibility = "visible";
+    }
+    </script>
+</html>

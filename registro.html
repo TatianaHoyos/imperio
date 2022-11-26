@@ -11,26 +11,38 @@
         <header id="menu">
             <div class="caja">
                 <input  onclick="ocultar()"  id="btn-cerrar" type="image" src="img/cerrar.png" height="50" width="50"/>
-                <h1>
-                    <img id="logo" src="img/logo1.png" > </h1>
+               
+                <h1><a href="index.html"><img id="logo" src="img/logo1.png"></a></h1>
                     <nav>
                         <ul id="menú">
-                            <li ><a href="index.html">Inicio</a></li>
+                            <li ><a href="proveedor.html">Proveedor</a></li>
                             <li class="separar"></li>
-                            <li ><a href="registro.html">Ver Registro</a></li>
+                            <li ><a href="compras.html">Compras</a></li>
                             <li class="separar"></li>
-                            <li ><a href="reportes.html">Consultar Reporte</a></li>
+                            <li ><a href="existencias.html">Existencias</a></li>
                             <li class="separar"></li>
-                            <li ><a href="sesion.html">Salir</a></li>
+                            <li ><a href="ventas.html">Ventas</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="mesero.html">Meseros</a></li>
+                            <li class="separar"></li>
+                            <li ><a href="sesion.html">Cerrar sesión</a></li>
                         </ul>
                     </nav>
             </div>
         </header>
-           
-        <main  id="contenido" style="background-color:rgba(27, 18, 18, 0)">
-            <input onclick="mostrar()" id="btn-abrir" type="image" src="img/me.svg" height="50" width="50"/>
+        <main id="contenido" style="background-color:rgba(27, 18, 18, 0)">
+            
+            <nav id="nav_menu_horizontal">
+                <input onclick="mostrar()" id="btn-abrir" type="image" src="img/me.svg" height="50" width="50"/>
+                <ul id="menu_horizontal">
+                    <li ><a href="mesero.html">Meseros</a></li>
+                    <li ><a href="registro.html">Registrar Mesero</a></li>
+                    
+                   
+                </ul>
+            </nav>
             <form>
-                <h2>Ver Registro</h2>
+                <h2>Registrar Mesero</h2>
                 <label for="cedula">Cedula</label>
                 <input type="text" id="cedula" class="input-padron" required placeholder="(XX)XXXX XXXX">
 
@@ -43,42 +55,9 @@
                 <label for="Telefono">Teléfono</label>
                 <input type="text" id="Telefono" class="input-padron" required placeholder="(XX)XXXX XXXX">
 
-                <input type="submit" value="Enviar formulario" class="enviar"> 
+                <input type="submit" value="Guardar" class="enviar"> 
             </form>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Cedula</th>
-                        <th>Nombre </th>
-                        <th>Dirección</th>
-                        <th>Correo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            <input type="submit" value="Consultar" class="enviar">
-            <input type="submit" value="Editar" class="enviar">
-            <input type="submit" value="Registrar" class="enviar">
-            <input type="submit" value="Eliminar" class="enviar">
+           
         </main>
     </body>
     <script>
