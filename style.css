@@ -29,6 +29,7 @@ nav{
 h2{
     text-align: center;
     color: #f5eb9a;
+    
 }
 nav a{
     text-transform: uppercase;
@@ -41,15 +42,9 @@ nav a{
     nav a:hover{
         list-style-type:none;
         text-decoration: underline;
-       
-        
     }
-  
-
     nav ul{
-        list-style-type:none;
-        
-        
+        list-style-type:none;     
     }
 
     li.separar{
@@ -57,15 +52,11 @@ nav a{
     }
     #logo{
         height: 150px;
-        
         margin: auto;
         display: block;
-    
     }
     #logo2{
-        
         width: 500px;
-        
         margin: auto;
         display: block;
       
@@ -137,11 +128,15 @@ nav a{
     width: 0;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-inicio_admin: 1;
     overflow-x: hidden;
     transition: 0.4s;
     padding: 1rem 0;
     box-sizing:border-box;
+    }
+    #menu_fijo{
+        width: 300px;
+        position: fixed;
     }
     #menu_horizontal {
         list-style-type: none;
@@ -176,3 +171,45 @@ nav a{
     #btn-abrir {
         transition: visibility .3s;
     }
+
+    #Cervezas{
+        height: 150px;
+        width: 90px;
+        padding: 1px 30px;
+        float: right;
+        transition: 1s all;
+        cursor: pointer;
+        
+    }
+
+    #Cervezas:hover{
+        height: 200px;
+        
+    }
+    #contenedor_principal{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+#contenedor_imagenes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#precios_cervesas{
+    width: 150px;
+}
+
+#precios_cervesas h3{
+    text-align: center;
+    color: wheat;
+  
+}
+#sombreado{
+    background-color:rgb(4 4 4 / 60%);
+}
+
+h1, h2, h3, label, a, table > *{
+    font-family: 'Roboto', sans-serif !important;
+}    

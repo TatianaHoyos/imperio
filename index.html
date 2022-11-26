@@ -1,39 +1,48 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="style.css">
-    <title>Imperio</title>
-</head>
-<body background="img/fondo.jpg">
-    
-    <header >
-        <div >
-            <a href="index.html"><img id="logo" src="img/logo1.png"></a></h1>
-                <nav>
-                    <ul id="menú">
-                        <li ><a href="proveedor.html">Proveedor</a></li>
-                        <li class="separar"></li>
-                        <li ><a href="compras.html">Compras</a></li>
-                        <li class="separar"></li>
-                        <li ><a href="existencias.html">Existencias</a></li>
-                        <li class="separar"></li>
-                        <li ><a href="ventas.html">Ventas</a></li>
-                        <li class="separar"></li>
-                        <li ><a href="mesero.html">Meseros</a></li>
-                        <li class="separar"></li>
-                        <li ><a href="sesion.html">Cerrar sesión</a></li>
-                    </ul>
-                </nav>
-        </div>
-    </header>
-    <h2>Adminstrador Pablo</h2>
-    <img id="logo2" src="img/logo1.png"> 
-    
-</body>
-<script>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Inicio de Sesión</title>
+        <!--import materialize-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--import google fonts roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body background="img/fondo.jpg">
+        
+        
+        <main>
+            <img id="logoSesion" src="img/logo1.png"> 
+
+            <form>
+                <h2>Iniciar Sesión</h2>
+                <label for="cedula">Cedula</label>
+                <input type="number" id="cedula" class="input-padron" required placeholder="">
+                <label for="Contraseña">Contraseña</label>
+                <input type="password" id="contraseña" class="input-padron" required placeholder="">
+                <input type="button" onclick="iniciar_sesion()" value="Ingresar" class="enviar">
+            </form>
+        </main>
+              
+    </body>    
+    <script>
+        function iniciar_sesion(){
+           var cedula=document.getElementById("cedula").value;
+           var contraseña=document.getElementById("contraseña").value;
+           if (cedula==123 && contraseña=="123"){
+            window.location="inicio_admin.html";
+           }else if(cedula==1234 && contraseña=="1234"){
+           window.location="inicio_meseros.html";
+           }else{
+            alert("Datos incorrectos.");
+           }
+
+            return false;
+        }
     </script>
+
 </html>
